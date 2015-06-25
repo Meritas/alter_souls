@@ -13,8 +13,7 @@ class ScreenController extends Controller
      */
 
     public function gameScreenAction(){
-
-        return $this->render('base.html.twig', array());
+        return $this->render('game/screen.html.twig', array());
     }
 
     public function startAction(){

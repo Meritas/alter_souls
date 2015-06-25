@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="gameApp">
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Alter Souls{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('02_sword_lion2.jpg') }}" />
     </head>
     <body>
         {% block body %}
             <h2>Village</h2>
         {% endblock %}
         {% block javascripts %}
-            <script src="js/angular.js"></script>
+            <script src="js/angular/angular.js"></script>
+            <script src="js/angular/angular-ui-router.js"></script>
+            <script src="js/angular/angular-ui-bootstrap.js"></script>
+            <script src="js/game/api/application.js"></script>
+            <script src="js/game/api/controllers.js"></script>
         {% endblock %}
     </body>
 </html>
