@@ -1,16 +1,15 @@
-var gameApp = angular.module('gameApp',['ui.router', 'ui.bootstrap']).config(['$compileProvider',
+var gameApp = angular.module('gameApp',["ui.router", "ui.bootstrap"]).config(['$compileProvider',
     function( $compileProvider )
     {
         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|data):/);
     }
 ]);
 
-angular.module('gameApp', []).config(function($interpolateProvider){
-    $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
-});
-
-angular.module('gameApp', ['ui.router']).config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+angular.module('gameApp', ['ui.router','ngMessages']).config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise("/");
+
+    const TMP_PATH = 'templates/';
+
     $stateProvider.
         state('index', {
             url: '/',
@@ -20,7 +19,7 @@ angular.module('gameApp', ['ui.router']).config(['$stateProvider', '$urlRouterPr
                     controller: 'controller as headerController'
                 },*/
                 'main':{
-                    templateUrl: '',
+                    templateUrl: TMP_PATH + 'game/story/index.html',
                     controller: 'storyController as storyController'
                 }/*,
                 'footer':{
@@ -28,14 +27,14 @@ angular.module('gameApp', ['ui.router']).config(['$stateProvider', '$urlRouterPr
                     controller: 'controller as footerController'
                 }*/
             }
-        })
-        /*.state('index.fight', {
-            url: 'fight',
+        }).
+        state('index.registration', {
+            url: 'register',
             views: {
                 'main@':{
-                    templateUrl: '',
-                    controller: 'controller as fightController'
+                    templateUrl: TMP_PATH + 'user/register/registerForm.html',
+                    controller: 'userRegistrationController as userRegistrationController'
                 }
             }
-        })*/
+        })
 }]);

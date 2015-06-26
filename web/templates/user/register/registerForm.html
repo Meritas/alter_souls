@@ -1,0 +1,48 @@
+<form class="form-horizontal form-xl" name="registerForm" id="user-register-form" ng-submit="formSubmit()">
+    <div class="form-group">
+        <label for="username-field" class="col-sm-4 control-label">Character Name</label>
+        <div class="col-sm-6">
+            <input type="text" ng-model="formData.username" name="username" id="username-field" class="form-control" maxlength="24" required>
+            <div ng-messages="registerForm.username.$error" ng-messages-include="templates/angular-directives/messages.html">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password-field" class="col-sm-4 control-label">Password</label>
+        <div class="col-sm-6">
+            <input type="text" ng-model="formData.password" name="password" id="password-field" class="form-control" minlength="6" required>
+            <div ng-messages="registerForm.password.$error" ng-messages-include="templates/angular-directives/messages.html">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="confirm-password-field" class="col-sm-4 control-label">Confirm Password</label>
+        <div class="col-sm-6">
+            <input type="text" ng-model="sideData.confirmPassword" name="confirmPassword" compare-to="formData.password" id="confirm-password-field" class="form-control" required>
+            <div ng-messages="registerForm.confirmPassword.$error" ng-messages-include="templates/angular-directives/messages.html">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email-field" class="col-sm-4 control-label">E-mail</label>
+        <div class="col-sm-6">
+            <input type="text" ng-model="formData.email" name="email" id="email-field" class="form-control" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="father-name-field" class="col-sm-4 control-label">
+            {{formData.username}}<span ng-if="formData.username">'s Father name</span>
+        </label>
+        <div class="col-sm-6">
+            <input type="text" ng-model="sideData.fatherName" name="father" id="father-name-field" class="form-control" maxlength="24" required>
+            <div ng-messages="registerForm.father.$error" ng-messages-include="templates/angular-directives/messages.html">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group" style="display: inline-block;">
+        <div class="col-sm-offset-3 col-sm-4">
+            <button type="submit" class="btn btn-default">Create Character</button>
+        </div>
+    </div>
+</form>

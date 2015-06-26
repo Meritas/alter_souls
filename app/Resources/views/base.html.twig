@@ -3,7 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Alter Souls{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link rel="stylesheet" type="text/css" media="screen" href="css/angular-bootstrap/bootstrap.css" />
+            <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('02_sword_lion2.jpg') }}" />
     </head>
     <body>
@@ -12,10 +15,12 @@
         {% endblock %}
         {% block javascripts %}
             <script src="js/angular/angular.js"></script>
+            <script src="js/angular/angular-messages.js"></script>
             <script src="js/angular/angular-ui-router.js"></script>
             <script src="js/angular/angular-ui-bootstrap.js"></script>
             <script src="js/game/api/application.js"></script>
             <script src="js/game/api/controllers.js"></script>
+            <script src="js/game/api/directives.js"></script>
         {% endblock %}
     </body>
 </html>
