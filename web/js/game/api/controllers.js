@@ -23,6 +23,8 @@ angular.module('gameApp').controller('userRegistrationController', ['$scope','$h
         };
 
         $scope.formSubmit = function(){
+            $http.requestAction('api/users/create', JSON.stringify($scope.formData));
+
             console.log('Form submitted');
         }
     }]);

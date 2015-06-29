@@ -38,3 +38,17 @@ angular.module('gameApp', ['ui.router','ngMessages']).config(['$stateProvider', 
             }
         })
 }]);
+
+angular.module('gameApp').run(['$http', function($http){
+
+    $http.requestAction = function(route, postData){
+        var fd = new FormData();
+        fd.append('post', postData);
+
+        return $http.post(route, fd, {
+            headers: {'Content-Type': undefined}
+
+        });
+
+    };
+}]);

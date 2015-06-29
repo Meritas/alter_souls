@@ -4,3 +4,6 @@ app:
 index:
     pattern:  /
     defaults: { _controller: AlterdBundle:Screen:gameScreen }
+create_user:
+    pattern:  /api/users/create
+    defaults: { _controller: AlterdBundle:Api/Users:createUser}
