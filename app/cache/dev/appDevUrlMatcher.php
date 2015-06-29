@@ -5,12 +5,12 @@ use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\RequestContext;
 
 /**
- * appProdUrlMatcher.
+ * appDevUrlMatcher.
  *
  * This class has been auto-generated
  * by the Symfony Routing Component.
  */
-class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\RedirectableUrlMatcher
+class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\RedirectableUrlMatcher
 {
     /**
      * Constructor.
@@ -27,19 +27,7 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
         $context = $this->context;
         $request = $this->request;
 
-        // homepage
-        if ($pathinfo === '/app/example') {
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
-        }
 
-        // index
-        if (rtrim($pathinfo, '/') === '') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'index');
-            }
-
-            return array (  '_controller' => 'Alterd\\Controller\\ScreenController::gameScreenAction',  '_route' => 'index',);
-        }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }

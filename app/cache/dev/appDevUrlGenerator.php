@@ -5,16 +5,14 @@ use Symfony\Component\Routing\Exception\RouteNotFoundException;
 use Psr\Log\LoggerInterface;
 
 /**
- * appProdUrlGenerator
+ * appDevUrlGenerator
  *
  * This class has been auto-generated
  * by the Symfony Routing Component.
  */
-class appProdUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerator
+class appDevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerator
 {
     private static $declaredRoutes = array(
-        'homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/app/example',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
-        'index' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Alterd\\Controller\\ScreenController::gameScreenAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
     );
 
     /**

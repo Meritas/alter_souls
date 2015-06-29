@@ -117,6 +117,7 @@
   'SensioDistributionBundle:Configurator/Step:doctrine.html.twig' => '/var/www/html/alter_souls/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/views/Configurator/Step/doctrine.html.twig',
   'SensioDistributionBundle:Configurator/Step:secret.html.twig' => '/var/www/html/alter_souls/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/views/Configurator/Step/secret.html.twig',
   'SensioDistributionBundle:Configurator:check.html.twig' => '/var/www/html/alter_souls/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/views/Configurator/check.html.twig',
+  ':game/story:index.html.twig' => '/var/www/html/alter_souls/app/Resources/views/game/story/index.html.twig',
   ':game:screen.html.twig' => '/var/www/html/alter_souls/app/Resources/views/game/screen.html.twig',
   '::base.html.twig' => '/var/www/html/alter_souls/app/Resources/views/base.html.twig',
   ':default:banner.html.twig' => '/var/www/html/alter_souls/app/Resources/views/default/banner.html.twig',
