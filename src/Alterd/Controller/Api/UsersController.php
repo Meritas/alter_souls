@@ -3,6 +3,7 @@
 namespace Alterd\Controller\Api;
 
 use Alterd\Entity\Api\User;
+use Alterd\Entity\CharacterSheet;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -23,32 +24,34 @@ class UsersController extends Controller {
             return new Response('No data');
         }
 
-        $userEntity = new User();
+        //CREATE USER
+        $user = new User();
 
-        $userEntity->setUsername($postData['username']);
-        $userEntity->setPassword(md5($postData['password']));
-        $userEntity->setEmail($postData['email']);
+        $user->setUsername($postData['username']);
+        $user->setPassword(md5($postData['password']));
+        $user->setEmail($postData['email']);
 
         $em = $this->getDoctrine()->getManager();
 
-        $em->persist($userEntity);
+        $em->persist($user);
+        $em->flush();
+
+        //CREATE CHARACTER SHEET
+
+        $characterSheet = new CharacterSheet();
+
+        $characterSheet->setUid($user->getId());
+        $characterSheet->setCharacterName($postData['characterName']);
+        $characterSheet->setCharacterFatherName($postData['fatherName']);
+
+        $em->persist($characterSheet);
         $em->flush();
 
         return new Response('Character created!');
+    }
 
+    public function loginUserAction(){
 
-        /*$userRecord = new User();
-
-        $userRecord->setUsername('Admin');
-        $userRecord->setPassword(md5('123456'));
-        $userRecord->setEmail('test@alterd.com');
-
-        $em = $this->getDoctrine()->getManager();
-
-        $em->persist($userRecord);
-        $em->flush();
-
-        return new Response('Created user id: ' . $userRecord->getId());*/
     }
 }
 

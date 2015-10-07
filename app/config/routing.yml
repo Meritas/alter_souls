@@ -7,3 +7,6 @@ index:
 create_user:
     pattern:  /api/users/create
     defaults: { _controller: AlterdBundle:Api/Users:createUser}
+login_user:
+    pattern:  /api/users/login
+    defaults: { _controller: AlterdBundle:Api/Users:loginUser}

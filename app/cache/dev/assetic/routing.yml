@@ -1,5 +1,0 @@
-_assetic:
-    resource: .
-    type: assetic
-_app:
-    resource: /var/www/html/alter_souls/app/config/routing_dev.yml

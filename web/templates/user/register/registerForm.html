@@ -1,9 +1,17 @@
 <form class="form-horizontal form-xl" name="registerForm" id="user-register-form" ng-submit="formSubmit()">
     <div class="form-group">
-        <label for="username-field" class="col-sm-4 control-label">Character Name</label>
+        <label for="username-field" class="col-sm-4 control-label">Username</label>
         <div class="col-sm-6">
             <input type="text" ng-model="formData.username" name="username" id="username-field" class="form-control" maxlength="24" required>
             <div ng-messages="registerForm.username.$error" ng-messages-include="templates/angular-directives/messages.html">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="username-field" class="col-sm-4 control-label">Character Name</label>
+        <div class="col-sm-6">
+            <input type="text" ng-model="formData.characterName" name="characterName" id="character-name-field" class="form-control" maxlength="26" required>
+            <div ng-messages="registerForm.characterName.$error" ng-messages-include="templates/angular-directives/messages.html">
             </div>
         </div>
     </div>
@@ -29,12 +37,12 @@
             <input type="text" ng-model="formData.email" name="email" id="email-field" class="form-control" required>
         </div>
     </div>
-    <div class="form-group">
+    <div class="form-group" ng-if="formData.characterName">
         <label for="father-name-field" class="col-sm-4 control-label">
-            {{formData.username}}<span ng-if="formData.username">'s Father name</span>
+            {{formData.characterName}}<span>'s Father name</span>
         </label>
         <div class="col-sm-6">
-            <input type="text" ng-model="sideData.fatherName" name="father" id="father-name-field" class="form-control" maxlength="24" required>
+            <input type="text" ng-model="formData.fatherName" name="father" id="father-name-field" class="form-control" maxlength="24" required>
             <div ng-messages="registerForm.father.$error" ng-messages-include="templates/angular-directives/messages.html">
             </div>
         </div>

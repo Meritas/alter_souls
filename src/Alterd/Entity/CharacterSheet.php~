@@ -1,0 +1,436 @@
+<?php
+
+namespace Alterd\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="character_sheets")
+ */
+class CharacterSheet
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     * @ORM\Column(type="integer")
+     */
+    private $uid;
+
+    /**
+     * @var string
+     * @ORM\Column(type="string", length=26)
+     */
+    private $characterName;
+
+    /**
+     * @var integer
+     * @ORM\Column(type="integer")
+     */
+    private $characterHp;
+
+    /**
+     * @var integer
+     * @ORM\Column(type="integer")
+     */
+    private $characterEn;
+
+    /**
+     * @var integer
+     * @ORM\Column(type="integer")
+     */
+    private $characterStr;
+
+    /**
+     * @var integer
+     * @ORM\Column(type="integer")
+     */
+    private $characterAgi;
+
+    /**
+     * @var integer
+     * @ORM\Column(type="integer")
+     */
+    private $characterSpd;
+
+    /**
+     * @var integer
+     * @ORM\Column(type="integer")
+     */
+    private $characterInt;
+
+    /**
+     * @var integer
+     * @ORM\Column(type="integer")
+     */
+    private $characterWp;
+
+    /**
+     * @var integer
+     * @ORM\Column(type="integer")
+     */
+    private $inventoryId;
+
+    /**
+     * @var integer
+     * @ORM\Column(type="integer")
+     */
+    private $powersId;
+
+    /**
+     * @var integer
+     * @ORM\Column(type="integer")
+     */
+    private $skillsId;
+
+    /**
+     * @var integer
+     * @ORM\Column(type="integer")
+     */
+    private $characterZodiac;
+
+    /**
+     * @var string
+     * @ORM\Column(type="string", length=26)
+     */
+    private $characterFatherName;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set uid
+     *
+     * @param integer $uid
+     * @return CharacterSheet
+     */
+    public function setUid($uid)
+    {
+        $this->uid = $uid;
+
+        return $this;
+    }
+
+    /**
+     * Get uid
+     *
+     * @return integer 
+     */
+    public function getUid()
+    {
+        return $this->uid;
+    }
+
+    /**
+     * Set characterName
+     *
+     * @param string $characterName
+     * @return CharacterSheet
+     */
+    public function setCharacterName($characterName)
+    {
+        $this->characterName = $characterName;
+
+        return $this;
+    }
+
+    /**
+     * Get characterName
+     *
+     * @return string 
+     */
+    public function getCharacterName()
+    {
+        return $this->characterName;
+    }
+
+    /**
+     * Set characterStr
+     *
+     * @param integer $characterStr
+     * @return CharacterSheet
+     */
+    public function setCharacterStr($characterStr)
+    {
+        $this->characterStr = $characterStr;
+
+        return $this;
+    }
+
+    /**
+     * Get characterStr
+     *
+     * @return integer 
+     */
+    public function getCharacterStr()
+    {
+        return $this->characterStr;
+    }
+
+    /**
+     * Set characterAgi
+     *
+     * @param integer $characterAgi
+     * @return CharacterSheet
+     */
+    public function setCharacterAgi($characterAgi)
+    {
+        $this->characterAgi = $characterAgi;
+
+        return $this;
+    }
+
+    /**
+     * Get characterAgi
+     *
+     * @return integer 
+     */
+    public function getCharacterAgi()
+    {
+        return $this->characterAgi;
+    }
+
+    /**
+     * Set characterSpd
+     *
+     * @param integer $characterSpd
+     * @return CharacterSheet
+     */
+    public function setCharacterSpd($characterSpd)
+    {
+        $this->characterSpd = $characterSpd;
+
+        return $this;
+    }
+
+    /**
+     * Get characterSpd
+     *
+     * @return integer 
+     */
+    public function getCharacterSpd()
+    {
+        return $this->characterSpd;
+    }
+
+    /**
+     * Set characterInt
+     *
+     * @param integer $characterInt
+     * @return CharacterSheet
+     */
+    public function setCharacterInt($characterInt)
+    {
+        $this->characterInt = $characterInt;
+
+        return $this;
+    }
+
+    /**
+     * Get characterInt
+     *
+     * @return integer 
+     */
+    public function getCharacterInt()
+    {
+        return $this->characterInt;
+    }
+
+    /**
+     * Set characterWp
+     *
+     * @param integer $characterWp
+     * @return CharacterSheet
+     */
+    public function setCharacterWp($characterWp)
+    {
+        $this->characterWp = $characterWp;
+
+        return $this;
+    }
+
+    /**
+     * Get characterWp
+     *
+     * @return integer 
+     */
+    public function getCharacterWp()
+    {
+        return $this->characterWp;
+    }
+
+    /**
+     * Set characterHp
+     *
+     * @param integer $characterHp
+     * @return CharacterSheet
+     */
+    public function setCharacterHp($characterHp)
+    {
+        $this->characterHp = $characterHp;
+
+        return $this;
+    }
+
+    /**
+     * Get characterHp
+     *
+     * @return integer 
+     */
+    public function getCharacterHp()
+    {
+        return $this->characterHp;
+    }
+
+    /**
+     * Set characterEn
+     *
+     * @param integer $characterEn
+     * @return CharacterSheet
+     */
+    public function setCharacterEn($characterEn)
+    {
+        $this->characterEn = $characterEn;
+
+        return $this;
+    }
+
+    /**
+     * Get characterEn
+     *
+     * @return integer 
+     */
+    public function getCharacterEn()
+    {
+        return $this->characterEn;
+    }
+
+    /**
+     * Set inventoryId
+     *
+     * @param integer $inventoryId
+     * @return CharacterSheet
+     */
+    public function setInventoryId($inventoryId)
+    {
+        $this->inventoryId = $inventoryId;
+
+        return $this;
+    }
+
+    /**
+     * Get inventoryId
+     *
+     * @return integer 
+     */
+    public function getInventoryId()
+    {
+        return $this->inventoryId;
+    }
+
+    /**
+     * Set powersId
+     *
+     * @param integer $powersId
+     * @return CharacterSheet
+     */
+    public function setPowersId($powersId)
+    {
+        $this->powersId = $powersId;
+
+        return $this;
+    }
+
+    /**
+     * Get powersId
+     *
+     * @return integer 
+     */
+    public function getPowersId()
+    {
+        return $this->powersId;
+    }
+
+    /**
+     * Set skillsId
+     *
+     * @param integer $skillsId
+     * @return CharacterSheet
+     */
+    public function setSkillsId($skillsId)
+    {
+        $this->skillsId = $skillsId;
+
+        return $this;
+    }
+
+    /**
+     * Get skillsId
+     *
+     * @return integer 
+     */
+    public function getSkillsId()
+    {
+        return $this->skillsId;
+    }
+
+    /**
+     * Set characterZodiac
+     *
+     * @param integer $characterZodiac
+     * @return CharacterSheet
+     */
+    public function setCharacterZodiac($characterZodiac)
+    {
+        $this->characterZodiac = $characterZodiac;
+
+        return $this;
+    }
+
+    /**
+     * Get characterZodiac
+     *
+     * @return integer 
+     */
+    public function getCharacterZodiac()
+    {
+        return $this->characterZodiac;
+    }
+
+    /**
+     * Set characterFatherName
+     *
+     * @param string $characterFatherName
+     * @return CharacterSheet
+     */
+    public function setCharacterFatherName($characterFatherName)
+    {
+        $this->characterFatherName = $characterFatherName;
+
+        return $this;
+    }
+
+    /**
+     * Get characterFatherName
+     *
+     * @return string 
+     */
+    public function getCharacterFatherName()
+    {
+        return $this->characterFatherName;
+    }
+}
