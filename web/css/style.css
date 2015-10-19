@@ -10,6 +10,13 @@ html,body{
     text-align: center;
 }
 
+#user-login-form{
+    width: 450px;
+    margin-top: 45px;
+    margin-left: 15px;
+    text-align: center;
+}
+
 /*
 *Not Working!*/
 #user-register-form label{

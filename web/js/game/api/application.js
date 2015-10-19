@@ -36,6 +36,15 @@ angular.module('gameApp', ['ui.router','ngMessages']).config(['$stateProvider', 
                     controller: 'userRegistrationController as userRegistrationController'
                 }
             }
+        }).
+        state('index.login', {
+            url: 'login',
+            views: {
+                'main@':{
+                    templateUrl: TMP_PATH + 'user/login/loginForm.html',
+                    controller: 'userLoginController as userLoginController'
+                }
+            }
         })
 }]);
 
